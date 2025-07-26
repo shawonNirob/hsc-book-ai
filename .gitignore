@@ -4,7 +4,6 @@ __pycache__/
 
 poetry-env/
 .cache/
-.python-version
 
 .vscode/
 

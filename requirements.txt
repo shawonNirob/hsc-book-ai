@@ -1,5 +1,6 @@
 fastapi==0.116.1
-uvicorn[standard]==0.30.1openai
+"uvicorn[standard]"
+openai
 fitz==0.0.1.dev2
 langchain==0.3.27
 langchain_community==0.3.27

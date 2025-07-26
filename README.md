@@ -53,34 +53,33 @@ http://127.0.0.1:8000
 
 ## Used Tools, Libraries, and Packages
 
-**Development Tools**
-**Visual Studio Code:** Code editor used for development.
+### Development Tools
+- **Visual Studio Code**: Code editor used for development.
 
-**Frameworks & Servers**
-**FastAPI:** High-performance web framework for building APIs with Python.
-**Uvicorn:** ASGI server used to run the FastAPI app.
+### Frameworks & Servers
+- **FastAPI**: High-performance web framework for building APIs with Python.
+- **Uvicorn**: ASGI server used to run the FastAPI app.
 
-**Langchain Ecosystem**
-**langchain** – Core Langchain framework for building LLM-based applications.
-**langchain_community** – Community integrations (e.g., vector stores, tools).
-**langchain_core** – Shared types and interfaces.
-**langchain_openai** – OpenAI integration for Langchain.
+### Langchain Ecosystem
+- **langchain**: Core Langchain framework for building LLM-based applications.
+- **langchain_community**: Community integrations (e.g., vector stores, tools).
+- **langchain_core**: Shared types and interfaces.
+- **langchain_openai**: OpenAI integration for Langchain.
 
-**AI and OCR**
-**pytesseract:** Python wrapper for Google's Tesseract-OCR.
-**Pillow:** Imaging library used for image manipulation.
-**PyMuPDF:** PDF and document parsing.
-**langgraph:** Graph-based orchestration for LangChain components.
+### AI and OCR
+- **pytesseract**: Python wrapper for Google's Tesseract-OCR.
+- **Pillow**: Imaging library used for image manipulation.
+- **PyMuPDF**: PDF and document parsing.
+- **langgraph**: Graph-based orchestration for LangChain components.
 
-**Vector Database**
-**Qdrant Client:** Client library for interacting with Qdrant, a vector similarity search engine.
+### Vector Database
+- **Qdrant Client**: Client library for interacting with Qdrant, a vector similarity search engine.
 
-**Data Validation**
-**Pydantic:** Data validation using Python type hints.
-**pydantic-settings:** Manage application settings from `.env`.
+### Data Validation
+- **Pydantic**: Data validation using Python type hints.
+- **pydantic-settings**: Manage application settings from `.env`.
 
-### **Utilities**
-**Loguru:** Advanced logging for debugging and tracing.
-**requests:** HTTP requests for external APIs.
-**python-multipart:** Required by FastAPI to handle file uploads.
-
+### Utilities
+- **Loguru**: Advanced logging for debugging and tracing.
+- **requests**: HTTP requests for external APIs.
+- **python-multipart**: Required by FastAPI to handle file uploads.

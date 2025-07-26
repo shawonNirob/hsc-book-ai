@@ -140,21 +140,19 @@ http://127.0.0.1:8000
 ![alt text](image-4.png)
 
 ## Follow Up Explanation
-**What method or library did you use to extract the text, and why? Did you face any formatting challenges with the PDF content?**
+**1. What method or library did you use to extract the text, and why? Did you face any formatting challenges with the PDF content?**
+
 I started by extracting text from PDFs using PyMuPDF, but it didn’t preserve the formatting well. So, I tried OCR with Tesseract and store page by page in vector database, which didn’t organize the content clearly.
-
 Then, I used regex patterns to separate different parts like MCQs, creative questions, and notes. However, this wasn’t very reliable.
-
 Then, I brought in LLM to clean and group the text, which helped accuracy but sometimes caused errors for the bigger documents.
-
 So I use the mix solution, extract text page by page, then use the LLM to process each page separately. This balances accuracy and efficiency well, although some challenges with LLM limits still exist.
-
 For file handling, I currently read the entire PDF file as bytes in FastAPI, which makes processing flexible. For storing PDFs, MinIO is good for production.
 
-
-**What chunking strategy did you choose (e.g. paragraph-based, sentence-based, character limit)? Why do you think it works well for semantic retrieval?**
+**2. What chunking strategy did you choose (e.g. paragraph-based, sentence-based, character limit)? Why do you think it works well for semantic retrieval?**
 I separated the content into specific blocks such as:
-MCQ questions with separate answer keys. MCQ questions with inline answers. Creative questions. Vocabulary and notes. Main content. Author information. Path Porichiti. 
+MCQ questions with separate answer keys. MCQ questions with inline answers. Creative questions. Vocabulary and notes. Main content. Author information. Path Porichiti.
 This block based chunking, combined with page by page extraction, helps group related information meaningfully.
 It works well for semantic retrieval because each chunk is thematically focused, reducing noise and improving the relevance of search results. By keeping related content together, the vector search can better capture context and meaning, leading to more accurate and useful retrieval.
+
+
 
